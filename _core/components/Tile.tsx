@@ -14,7 +14,7 @@ import styles from './Tile.module.scss';
 
 type TPageData = {
     title: string;
-    desc: string;
+    desc: string | JSX.Element;
   };
   
   type TTileProps = {

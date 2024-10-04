@@ -16,7 +16,7 @@ import Tile from '_core/components/Tile';
 
 type TPageData = {
   title: string;
-  desc: string;
+  desc: string | JSX.Element;
 };
 
 function Description(desc: string) {
