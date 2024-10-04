@@ -1,0 +1,14 @@
+.poweredWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: calc(-25px + var(--spacing-md));
+    margin-bottom: var(--spacing-sm);
+    font-size: calc(var(--spacing-md) * 2);
+}
+
+.noonLogo {
+    width: 25px;
+    height: 25px;
+}

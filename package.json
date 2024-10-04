@@ -1,0 +1,75 @@
+{
+  "name": "nasa-exoplanet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.30",
+    "next": "14.2.14",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-error-boundary": "^4.0.13",
+    "react-i18next": "^15.0.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "universal-cookie": "^7.2.0"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.2.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.14",
+    "eslint-plugin-css-modules": "^2.12.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-json": "^4.0.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-unicorn": "^54.0.0",
+    "postcss": "^8.4.39",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.6.0",
+    "postcss-rtl": "^2.0.0",
+    "sass": "^1.77.8",
+    "stylelint": "^16.7.0",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-prettier": "^5.0.2",
+    "stylelint-scss": "^6.4.1",
+    "typescript": "^5"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-css-modules",
+      "stylelint-prettier/recommended"
+    ],
+    "plugins": [
+      "stylelint-scss",
+      "stylelint-prettier"
+    ],
+    "rules": {
+      "selector-class-pattern": "^(--)?[a-z]([A-Z]?[a-z]+)+",
+      "prettier/prettier": [
+        true,
+        {
+          "singleQuote": true,
+          "tabWidth": 4
+        }
+      ]
+    }
+  }
+}

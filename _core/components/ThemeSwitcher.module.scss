@@ -1,0 +1,39 @@
+$icon-size: 20px;
+$container-height: 30px;
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 4.5rem;
+    padding: var(--spacing-sm);
+    border-radius: $container-height / 2;
+    height: $container-height;
+
+    body[data-theme='light'] & {
+        background-color: var(--color-primary-200);
+    }
+
+    body[data-theme='dark'] & {
+        background-color: var(--color-primary-200);
+    }
+
+    .button {
+        color: var(--color-secondary-100);
+        padding: var(--spacing-sm) var(--spacing-sm);
+        border-radius: inherit;
+        cursor: pointer;
+
+        img {
+            width: $icon-size;
+            height: $icon-size;
+        }
+
+        &.active {
+            color: var(--color-secondary-200);
+        }
+
+        body[data-theme='light'] &.active {
+            background-color: var(--color-primary-200);
+        }
+    }
+}

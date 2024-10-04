@@ -1,0 +1,19 @@
+.homeHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--spacing-2xl);
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xl);
+
+        h2 {
+            font-size: var(--spacing-3xl);
+            font-weight: 600;
+            line-height: calc(var(--spacing-2xl) + 6px);
+        }
+    }
+}

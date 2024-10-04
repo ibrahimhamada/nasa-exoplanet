@@ -1,0 +1,26 @@
+@use '../_core/styles/mixins' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2xl);
+}
+
+.tileContainer {
+    width: 1000px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-2xl);
+
+    // @include screen-min-tablet {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
+
+    // @include screen-min-desktop {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
+}

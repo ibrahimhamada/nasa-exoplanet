@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-3xl);
+    overflow: hidden;
+
+    .header {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .themeSwitcher {
+        display: flex;
+        gap: var(--spacing-sm);
+        align-items: center;
+    }
+
+    .navContainer {
+        flex-grow: 1;
+        display: flex;
+        gap: var(--spacing-3xl);
+    }
+
+    .authContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-md);
+        color: var(--color-secondary-800);
+
+        .authImg {
+            width: var(--spacing-2xl);
+            border-radius: 50%;
+        }
+    }
+
+    .search {
+        width: fit-content;
+        display: flex;
+        gap: var(--spacing-2xl);
+    }
+}

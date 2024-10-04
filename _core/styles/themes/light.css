@@ -1,0 +1,87 @@
+:root {
+    body[data-theme='light'] {
+        /* primary */
+        --color-primary-0: #fffffe;
+        --color-primary-100: #f1f1f1;
+        --color-primary-200: #e1e1e1;
+        --color-primary-300: #d1d1d1;
+        --color-primary-400: #c1c1c1;
+        --color-primary-500: #b1b1b1;
+        --color-primary-600: #a8a8a8;
+        --color-primary-700: #8f8f8f;
+        --color-primary-800: #787878;
+        --color-primary-900: #5c5c5c;
+        --color-primary-1000: #4f4f4f;
+        --color-primary-1100: #f2f4f7;
+        --color-primary-gradient-100: linear-gradient(
+            rgb(255 255 255 / 100%),
+            rgb(255 255 255 / 0%)
+        );
+        --color-primary-gradient-200: linear-gradient(
+            157.67deg,
+            #eaeaea 4.65%,
+            #fafafa 76.96%
+        );
+
+        /* --color-primary-gradient-300: linear-gradient(
+            180deg,
+            #161616 0%,
+            #0b0b0b 100%
+        ); */
+
+        --color-primary-gradient-300: linear-gradient(
+            rgb(255 255 255 / 100%) 0%,
+            rgb(255 255 255 / 100%) 100%
+        );
+
+        /* secondary */
+        --color-secondary-0: #1e1e1e;
+        --color-secondary-100: #000;
+        --color-secondary-200: #1a1a1a;
+        --color-secondary-300: #2d2d2d;
+        --color-secondary-400: #3f3f3f;
+        --color-secondary-500: #4f4f4f;
+        --color-secondary-600: #5c5c5c;
+        --color-secondary-700: #6b6b6b;
+        --color-secondary-800: #7a7a7a;
+
+        /* Color Accent */
+        --color-main-100: #3866df;
+        --color-link-100: #feee00;
+
+        /* noon accent */
+        --color-accent-100: #3866df;
+        --color-accent-200: #4a90e2;
+        --color-accent-300: #5caff2;
+        --color-accent-400: #6dcffa;
+        --color-accent-500: #7edfff;
+
+        /* success */
+        --color-success-100: #b8d8be;
+        --color-success-200: #c8e1cc;
+        --color-success-300: #d2e7d6;
+        --color-success-400: #e0f0e3;
+        --color-success-500: #e8f4ea;
+
+        /* warning */
+        --color-warning-100: #ee6969;
+        --color-warning-200: #f97c7c;
+        --color-warning-300: #fdaaaa;
+        --color-warning-400: #f4c1c1;
+        --color-warning-500: #fde0e0;
+
+        /* info */
+        --color-info-100: #304674;
+        --color-info-200: #98bad5;
+        --color-info-300: #b2cbde;
+        --color-info-400: #c6d3e3;
+        --color-info-500: #d8e1e8;
+
+        /* border */
+        --color-border-100: linear-gradient(180deg, #f1f1f1 0%, #fafafa 100%);
+
+        /* background-color */
+        --color-background-100: #fff;
+        --background-overlay-0: rgb(255 255 255 / 80%);
+    }
+}

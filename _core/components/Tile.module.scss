@@ -1,0 +1,58 @@
+$container-height: 220px;
+
+.container {
+    border-radius: 15px;
+    overflow: hidden;
+    padding: var(--spacing-2xs);
+    border: 1px solid var(--color-primary-gradient-200);
+    transition: all 0.3s ease;
+
+    .innerContainer {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacing-md) var(--spacing-lg);
+        gap: var(--spacing-lg);
+        min-height: $container-height;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .title {
+            font-size: calc(var(--spacing-xl) + 5px);
+            font-weight: 600;
+            color: var(--color-secondary-100);
+        }
+
+        .description {
+            color: var(--color-secondary-600);
+            text-align: left;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .know-more {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: var(--spacing-lg);
+            margin-top: auto;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: var(--spacing-2xs) solid var(--color-primary-300);
+            border-radius: var(--spacing-md);
+
+            p {
+                padding-right: var(--spacing-lg);
+                text-transform: uppercase;
+            }
+
+            .lightChevron {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}
