@@ -8,7 +8,6 @@ import Link from 'next/link';
 import styles from './NavItems.module.scss';
 
 
-
 const NavItems: React.FC = () => {
     const links = [
         { name: 'Explore', url: '/' },

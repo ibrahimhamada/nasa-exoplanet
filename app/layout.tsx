@@ -10,7 +10,7 @@ import '_core/styles/base.scss';
 import { ThemeContextProvider } from '_core/contexts/themeContext';
 import Header from '_core/components/Header';
 import Main from '_core/components/Main';
-import Footer from '_core/components/Footer';
+// import Footer from '_core/components/Footer';
 // import auth from '../_coreservices/auth';
 
 // import { getHomePageData } from '../_core/utils/homepage';

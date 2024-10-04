@@ -7,7 +7,6 @@ import clsx from 'clsx';
 
 import { poppins, inter } from '_core/styles/fonts';
 import { ETheme } from '_core/constants/theme';
-import TileImage from '_core/components/TileImage';
 // import icons from '@/assets/icons';
 import { useThemeContext } from '_core/contexts/themeContext';
 
