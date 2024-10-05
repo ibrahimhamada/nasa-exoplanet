@@ -1,16 +1,66 @@
+@keyframes slideInBackground {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
 .container {
     width: 100%;
-    position: relative;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-around;
     gap: var(--spacing-xl);
-    padding: var(--spacing-xl) var(--spacing-3xl);
+    padding: var(--spacing-lg) var(--spacing-3xl);
     overflow: hidden;
+    background: transparent;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+
+
+    // Scroll state with background color
+    &.scrolled {
+        body[data-theme='light'] & {
+            background: linear-gradient(to right, var(--color-primary-100) 0%, var(--color-primary-100) 100%);
+        }
+    
+        body[data-theme='dark'] & {
+            background: linear-gradient(to right, var(--color-primary-100) 0%, var(--color-primary-100) 100%);
+        }
+    }
+    
+
+    
+
+    @media (max-width: 600px) {
+        padding: var(--spacing-lg) var(--spacing-xl);
+        gap: 0;
+    }
+
+    .ctr {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: var(--spacing-xl);
+
+        @media (max-width: 600px) {
+            gap: 0;
+        }
+    }
 
     .header {
         font-size: 24px;
         font-weight: 500;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    
     }
 
     .themeSwitcher {

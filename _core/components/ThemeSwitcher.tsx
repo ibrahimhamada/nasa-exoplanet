@@ -6,8 +6,6 @@ import React, { useCallback } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-
-// eslint-disable-next-line import/order
 import { useThemeContext } from '../contexts/themeContext';
 
 // import icons from '/assets/icons';
@@ -44,10 +42,7 @@ const ThemeSwitcher = () => {
                         [styles.active]: theme === ETheme.Light,
                     })}
                     onClick={handleOnClick(ETheme.Light)}>
-                     <motion.div
-                        animate={{ rotate: theme === ETheme.Light ? 360 : 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
+                    <motion.div animate={{ rotate: theme === ETheme.Light ? 360 : 0 }} transition={{ duration: 0.5 }}>
                         <Image src={theme === ETheme.Light ? sunBlueWhiteIcon : sunGreyIcon} alt="Light-theme-switch" />
                     </motion.div>
                 </motion.button>
@@ -61,12 +56,12 @@ const ThemeSwitcher = () => {
                         [styles.active]: theme === ETheme.Dark,
                     })}
                     onClick={handleOnClick(ETheme.Dark)}>
-                    <motion.div
-                        animate={{ rotate: theme === ETheme.Dark ? 360 : 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <Image src={theme === ETheme.Light ? moonGreyIcon : moonYellowBlackIcon} alt="Dark-theme-switch" />
-                        </motion.div>
+                    <motion.div animate={{ rotate: theme === ETheme.Dark ? 360 : 0 }} transition={{ duration: 0.5 }}>
+                        <Image
+                            src={theme === ETheme.Light ? moonGreyIcon : moonYellowBlackIcon}
+                            alt="Dark-theme-switch"
+                        />
+                    </motion.div>
                 </motion.button>
             </>
         </motion.div>

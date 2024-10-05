@@ -110,6 +110,7 @@ video {
     font: inherit;
     font-size: 100%;
     vertical-align: baseline;
+    scroll-behavior: smooth;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -178,7 +179,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
     min-width: 0;
     align-items: center;
     background-color: var(--color-primary-100);

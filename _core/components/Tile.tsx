@@ -6,26 +6,27 @@ import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
 import { poppins, inter } from '_core/styles/fonts';
-import { ETheme } from '_core/constants/theme';
-// import icons from '@/assets/icons';
-import { useThemeContext } from '_core/contexts/themeContext';
 
 import styles from './Tile.module.scss';
 
 type TPageData = {
     title: string;
     desc: string | JSX.Element;
-  };
-  
-  type TTileProps = {
+};
+
+type TTileProps = {
     data: TPageData; // Define that the component receives a prop called 'data' of type TPageData
-  };
-  
-  const Tile: React.FC<TTileProps> = ({ data }) => {
+    margin?: string;
+    maxWidth?: string;
+};
+
+const Tile: React.FC<TTileProps> = ({ data, margin, maxWidth }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
+        <section id={data.title}>
         <motion.div
+            style={{marginTop: margin, maxWidth: maxWidth}}
             className={styles.container}
             initial={{
                 background: 'var(--color-primary-gradient-200)',
@@ -87,6 +88,7 @@ type TPageData = {
                 </motion.div> */}
             </motion.div>
         </motion.div>
+        </section>
     );
 };
 

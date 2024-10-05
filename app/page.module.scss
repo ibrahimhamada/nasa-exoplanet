@@ -8,19 +8,79 @@
 }
 
 .tileContainer {
-    width: 1000px;
+    width: 100%;
+    // max-width: 900px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-2xl);
 
-    // @include screen-min-tablet {
-    //     grid-template-columns: repeat(1, 1fr);
-    // }
+    // For larger screens (greater than 1200px width)
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 900px;
+    }
 
-    // @include screen-min-desktop {
-    //     grid-template-columns: repeat(1, 1fr);
-    // }
+    // For screens larger than 768px (tablet)
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 900px;
+    }
+}
+
+.tileCtr {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--spacing-2xl);
+    margin: 0;
+    // max-width: 300px;
+    // width: 300px;
+
+    // For larger screens (greater than 1200px width)
+    @media (max-width: 767px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 310px;  
+        margin: auto;  
+    }
+
+
+
+    // For larger screens (greater than 1200px width)
+    @media (min-width: 1200px) {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // For screens larger than 768px (tablet)
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.oneCard {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr);
+    justify-content: center;
+    align-items: center;
+
+        // For larger screens (greater than 1200px width)
+        @media (max-width: 767px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 310px;  
+            margin: auto;  
+        }
+    
 }

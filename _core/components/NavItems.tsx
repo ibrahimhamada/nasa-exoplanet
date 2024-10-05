@@ -1,33 +1,35 @@
 'use client'; // Ensure this is a client component
 
 import React from 'react';
-
 import Link from 'next/link';
 
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from './NavItems.module.scss';
 
-
 const NavItems: React.FC = () => {
     const links = [
-        { name: 'Explore', url: '/' },
-        { name: 'About', url: '/articles' },
-        { name: 'Contact', url: '/portfolio' },
-        // { name: 'About', url: '/about' },
-        // { name: 'Contact', url: '/contact' }
-      ];
-    
+        { name: 'Explore', id: 'Explore Exovision' },
+        { name: 'About', id: 'About' },
+        { name: 'Contact', id: 'Contact' },
+    ];
+
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className={styles.container}>
             {links.map((link, index) => (
-                <Link
-                    href={link.url}
+                <button
                     key={index}
-                    className={`${styles.title}`}
-                    // onClick={() => setSelectedIndex(index)}
-                    >
+                    onClick={() => scrollToSection(link.id)}
+                    className={styles.title}
+                >
                     {link.name}
-                </Link>
+                </button>
             ))}
         </div>
     );
