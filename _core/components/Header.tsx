@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+
 import clsx from 'clsx';
 import Link from 'next/link';
+
 import { poppins } from '_core/styles/fonts';
+
+// eslint-disable-next-line css-modules/no-unused-class
 import styles from './Header.module.scss';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavItems from './NavItems';
@@ -16,7 +20,8 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) { // Adjust the scroll value as needed
+            if (window.scrollY > 50) {
+                // Adjust the scroll value as needed
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);

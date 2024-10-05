@@ -7,10 +7,9 @@ $heightitem: 30px;
     flex-direction: row;
     gap: var(--spacing-3xl);
 
-    @media (max-width: 600px) {
+    @media (width <= 600px) {
         gap: 0;
     }
-
 
     .title {
         width: auto;
@@ -24,10 +23,9 @@ $heightitem: 30px;
         text-decoration: none;
         border-radius: 0;
 
-        @media (max-width: 600px) {
+        @media (width <= 600px) {
             padding: calc(var(--spacing-md) - 3px) var(--spacing-md);
         }
-    
 
         &:hover {
             color: var(--color-secondary-100);
@@ -35,9 +33,8 @@ $heightitem: 30px;
             border-radius: calc(var(--spacing-md) + 2px);
         }
     }
+
     .selected {
         color: var(--color-main-100);
     }
 }
-
-

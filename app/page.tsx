@@ -1,15 +1,15 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React from 'react';
 
 import { Metadata } from 'next';
 
 import AnimatedWrapper from '_core/components/AnimatedWrapper';
-import HomeHeader from '_core/components/HomeHeader';
 import Tile from '_core/components/Tile';
-
-import styles from './page.module.scss';
 import ContactTile from '_core/components/ContactTile';
 import InfoText from '_core/components/InfoText';
 import DemoTile from '_core/components/DemoTile';
+
+import styles from './page.module.scss';
 
 type TPageData = {
     title: string;
@@ -28,21 +28,6 @@ type TDemoData = {
     video: string;
 };
 
-
-
-
-function Description(desc: string | JSX.Element) {
-    const formattedDesc = (desc as string).split('\n').map((line, index) => (
-        <span key={index}>
-            {line}
-            <br />
-            <br />
-        </span>
-    ));
-
-    return <div>{formattedDesc}</div>;
-}
-
 const HomePage = async () => {
     const ExploreData: TPageData = {
         title: 'Explore Exovision',
@@ -56,9 +41,8 @@ const HomePage = async () => {
 
     const DemoData: TDemoData = {
         title: 'Demo',
-        video: 'https://www.youtube.com/watch?v=3F6bTGqYj4Q',
+        video: 'https://www.youtube.com/watch?v=QCtEGrjt56E',
     };
-
 
     const ContactData: TPageData = {
         title: 'Contact',
@@ -67,65 +51,59 @@ const HomePage = async () => {
 
     const IbrahimData: TContactData = {
         name: 'Ibrahim Hamada',
-        email: "ibrahimhamada439@gmail.com",
-        linkedin: "https://www.linkedin.com/in/ibrahim-hamada-158669218/",
+        email: 'ibrahimhamada439@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/ibrahim-hamada-158669218/',
         img: require('_core/assets/ibrahim.jpg').default,
     };
 
     const AyaData: TContactData = {
         name: 'Aya Hossam',
-        email: "ayahm1@uci.edu",
-        linkedin: "https://www.linkedin.com/in/aya-hussam-eldin-356938209/",
+        email: 'ayahm1@uci.edu',
+        linkedin: 'https://www.linkedin.com/in/aya-hussam-eldin-356938209/',
         img: require('_core/assets/aya.jpeg').default,
     };
 
     const KareemData: TContactData = {
         name: 'Kareem Morsi',
-        email: "kreemmorsy2001@gmail.com",
-        linkedin: "https://www.linkedin.com/in/kreemmorsy/",
+        email: 'kreemmorsy2001@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/kreemmorsy/',
         img: require('_core/assets/kareem.jpeg').default,
     };
 
     const RehandData: TContactData = {
         name: 'Rehand Mohamed',
-        email: "rehandabdelhady@gmail.com",
-        linkedin: "https://www.linkedin.com/in/rehand-abdelhady-5150a1206/",
+        email: 'rehandabdelhady@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/rehand-abdelhady-5150a1206/',
         img: require('_core/assets/rehand.jpeg').default,
     };
 
     const RehabData: TContactData = {
         name: 'Rehab Yehia',
-        email: "rehabyehia282002@gmail.com",
-        linkedin: "https://www.linkedin.com/in/rehabyehia/",
+        email: 'rehabyehia282002@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/rehabyehia/',
         img: require('_core/assets/rehab.jpeg').default,
     };
-
-
 
     return (
         <AnimatedWrapper>
             <div className={styles.container}>
                 <div className={styles.tileContainer}>
-                    <Tile data={ExploreData} margin='70px'/>
-                    <Tile data={AboutData} margin='70px'/>
-                    <DemoTile data={DemoData} margin='70px'/>
+                    <Tile data={ExploreData} margin="70px" />
+                    <Tile data={AboutData} margin="70px" />
+                    <DemoTile data={DemoData} margin="70px" />
 
-                    <Tile data={ContactData} margin='70px'/>
+                    <Tile data={ContactData} margin="70px" />
 
-                <div className={styles.tileCtr}>
-
-                    <ContactTile data={IbrahimData}  margin='24px' maxWidth='468px'/>
-                    <ContactTile data={AyaData} margin='24px' maxWidth='468px'/>
-                    <ContactTile data={KareemData} margin='24px' maxWidth='468px'/>
-                    <ContactTile data={RehandData} margin='24px' maxWidth='468px'/>
-                </div>
-
-                    <div className={styles.oneCard}>
-                    <ContactTile data={RehabData} margin='24px' maxWidth='468px'/>
+                    <div className={styles.tileCtr}>
+                        <ContactTile data={IbrahimData} margin="24px" maxWidth="468px" />
+                        <ContactTile data={AyaData} margin="24px" maxWidth="468px" />
+                        <ContactTile data={KareemData} margin="24px" maxWidth="468px" />
+                        <ContactTile data={RehandData} margin="24px" maxWidth="468px" />
                     </div>
 
-
-
+                    <div className={styles.oneCard}>
+                        <ContactTile data={RehabData} margin="24px" maxWidth="468px" />
+                    </div>
                 </div>
             </div>
         </AnimatedWrapper>
