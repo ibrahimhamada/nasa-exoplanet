@@ -11,6 +11,8 @@ const NavItems: React.FC = () => {
         { name: 'Explore', id: 'Explore Exovision' },
         { name: 'About', id: 'About' },
         { name: 'Contact', id: 'Contact' },
+        { name: 'Demo', id: 'Demo' },
+
     ];
 
     const scrollToSection = (id: string) => {

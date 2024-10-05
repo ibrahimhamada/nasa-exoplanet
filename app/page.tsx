@@ -9,10 +9,11 @@ import Tile from '_core/components/Tile';
 import styles from './page.module.scss';
 import ContactTile from '_core/components/ContactTile';
 import InfoText from '_core/components/InfoText';
+import DemoTile from '_core/components/DemoTile';
 
 type TPageData = {
     title: string;
-    desc: string | JSX.Element | JSX.Element;
+    desc: string | JSX.Element;
 };
 
 type TContactData = {
@@ -20,6 +21,11 @@ type TContactData = {
     email: string;
     linkedin: string;
     img: string;
+};
+
+type TDemoData = {
+    title: string;
+    video: string;
 };
 
 
@@ -47,6 +53,12 @@ const HomePage = async () => {
         title: 'About',
         desc: InfoText(),
     };
+
+    const DemoData: TDemoData = {
+        title: 'Demo',
+        video: 'https://www.youtube.com/watch?v=3F6bTGqYj4Q',
+    };
+
 
     const ContactData: TPageData = {
         title: 'Contact',
@@ -96,6 +108,8 @@ const HomePage = async () => {
                 <div className={styles.tileContainer}>
                     <Tile data={ExploreData} margin='70px'/>
                     <Tile data={AboutData} margin='70px'/>
+                    <DemoTile data={DemoData} margin='70px'/>
+
                     <Tile data={ContactData} margin='70px'/>
 
                 <div className={styles.tileCtr}>
@@ -119,8 +133,7 @@ const HomePage = async () => {
 };
 export const generateMetadata = async () => {
     const metadata: Metadata = {};
-    metadata.title = 'Home';
-    metadata.description = 'Lighthouse homepage with links to various pages.';
+    metadata.title = 'ExoVision';
 
     return metadata;
 };

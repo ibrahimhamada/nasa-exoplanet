@@ -17,6 +17,7 @@
     "react-dom": "^18",
     "react-error-boundary": "^4.0.13",
     "react-i18next": "^15.0.0",
+    "react-player": "^2.16.0",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "universal-cookie": "^7.2.0"
@@ -39,6 +40,7 @@
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-unicorn": "^54.0.0",
+    "file-loader": "^6.2.0",
     "postcss": "^8.4.39",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.6.0",

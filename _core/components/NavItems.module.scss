@@ -24,6 +24,11 @@ $heightitem: 30px;
         text-decoration: none;
         border-radius: 0;
 
+        @media (max-width: 600px) {
+            padding: calc(var(--spacing-md) - 3px) var(--spacing-md);
+        }
+    
+
         &:hover {
             color: var(--color-secondary-100);
             background-color: var(--color-primary-200);
