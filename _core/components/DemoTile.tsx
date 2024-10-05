@@ -84,7 +84,7 @@ const DemoTile: React.FC<TTileProps> = ({ data, margin, maxWidth }) => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 1.2 , color: 'var(--color-main-100)', borderColor: 'var(--color-main-100)' }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}   
-                    onClick={() => window.open(`https://github.com/KareemMAX/LastMan/releases`)}      
+                    onClick={() => window.open(`https://github.com/KareemMAX/exovision/releases`)}      
                 >       
                     <p className={styles.btn}>Try the game yourself</p>
                 </motion.button>
